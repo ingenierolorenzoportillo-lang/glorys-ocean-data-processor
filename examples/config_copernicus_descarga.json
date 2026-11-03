@@ -1,0 +1,69 @@
+{
+  "input": {
+    "directory": "data",
+    "pattern": "*.nc*",
+    "dask_chunks": "auto"
+  },
+  "output": {
+    "directory": "outputs",
+    "csv": true,
+    "excel": true,
+    "netcdf": true,
+    "figures": true,
+    "dpi": 220,
+    "hovmoller": true
+  },
+  "region": {
+    "name": "Cabo Verde (ejemplo de descarga)",
+    "bbox": [
+      -26,
+      -22,
+      14,
+      18
+    ]
+  },
+  "time": {
+    "start": null,
+    "end": null,
+    "baseline_start": "2020-01-01",
+    "baseline_end": "2020-12-31",
+    "target_years": [
+      2020
+    ],
+    "exclude_target_years_from_baseline": false,
+    "min_baseline_years": 1,
+    "min_daily_coverage": 0.9,
+    "require_complete_month": true
+  },
+  "variables": [
+    "thetao"
+  ],
+  "depth": {
+    "mode": "surface",
+    "meters": null
+  },
+  "points": [],
+  "maps": {
+    "enabled": true,
+    "coastline_shapefile": null,
+    "max_panels": 4,
+    "mean_maps": true
+  },
+  "download": {
+    "dataset_id": "cmems_mod_glo_phy_my_0.083deg_P1D-m",
+    "variables": [
+      "thetao"
+    ],
+    "bbox": [
+      -26,
+      -22,
+      14,
+      18
+    ],
+    "start": "2020-01-01",
+    "end": "2020-01-14",
+    "minimum_depth": 0,
+    "maximum_depth": 5,
+    "filename": "glorys_thetao_cabo_verde_2020.nc"
+  }
+}

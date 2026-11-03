@@ -1,0 +1,74 @@
+{
+  "input": {
+    "directory": "data",
+    "pattern": "*.nc*",
+    "dask_chunks": "auto"
+  },
+  "output": {
+    "directory": "outputs",
+    "csv": true,
+    "excel": true,
+    "netcdf": true,
+    "figures": true,
+    "dpi": 300,
+    "hovmoller": true
+  },
+  "region": {
+    "name": "Guapi – Isla Gorgona (Pacífico colombiano)",
+    "bbox": [
+      -78.5,
+      -77.8,
+      2.5,
+      3.3
+    ]
+  },
+  "time": {
+    "start": "1993-01-01",
+    "end": "2026-12-31",
+    "baseline_start": "1993-01-01",
+    "baseline_end": "2022-12-31",
+    "target_years": [
+      2025,
+      2026
+    ],
+    "exclude_target_years_from_baseline": false,
+    "min_baseline_years": 10,
+    "min_daily_coverage": 0.9,
+    "require_complete_month": true
+  },
+  "variables": [
+    "thetao",
+    "so",
+    "current_speed",
+    "zos",
+    "mlotst"
+  ],
+  "depth": {
+    "mode": "surface",
+    "meters": null
+  },
+  "points": [
+    {
+      "name": "Marino Guapi–Gorgona",
+      "latitude": 2.85,
+      "longitude": -78.1,
+      "max_distance_km": 25
+    }
+  ],
+  "maps": {
+    "enabled": true,
+    "coastline_shapefile": null,
+    "max_panels": 4,
+    "mean_maps": true
+  },
+  "download": {
+    "dataset_id": "",
+    "variables": [],
+    "bbox": null,
+    "start": null,
+    "end": null,
+    "minimum_depth": null,
+    "maximum_depth": null,
+    "filename": "copernicus_subset.nc"
+  }
+}
