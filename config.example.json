@@ -1,0 +1,55 @@
+{
+  "input": {
+    "directory": "data",
+    "pattern": "*.nc*",
+    "dask_chunks": "auto"
+  },
+  "output": {
+    "directory": "outputs",
+    "csv": true,
+    "excel": true,
+    "netcdf": true,
+    "figures": true,
+    "hovmoller": true,
+    "dpi": 220
+  },
+  "region": {
+    "name": "Ocean study region",
+    "bbox": null
+  },
+  "time": {
+    "start": null,
+    "end": null,
+    "baseline_start": "1993-01-01",
+    "baseline_end": "2022-12-31",
+    "target_years": [],
+    "exclude_target_years_from_baseline": false,
+    "min_baseline_years": 5,
+    "min_daily_coverage": 0.9,
+    "require_complete_month": true
+  },
+  "variables": [
+    "auto"
+  ],
+  "depth": {
+    "mode": "surface",
+    "meters": null
+  },
+  "points": [],
+  "maps": {
+    "enabled": true,
+    "mean_maps": true,
+    "coastline_shapefile": null,
+    "max_panels": 4
+  },
+  "download": {
+    "dataset_id": "",
+    "variables": [],
+    "bbox": null,
+    "start": null,
+    "end": null,
+    "minimum_depth": null,
+    "maximum_depth": null,
+    "filename": "copernicus_subset.nc"
+  }
+}

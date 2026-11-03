@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "glorys-ocean-data-processor"
+version = "1.0.0b1"
+description = "Configurable GLORYS / Copernicus ocean NetCDF climatology, anomalies and visualisation"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Research software contributors"}]
+dependencies = [
+  "numpy>=1.26", "pandas>=2.1", "xarray>=2024.1",
+  "scipy>=1.11", "matplotlib>=3.8", "openpyxl>=3.1",
+]
+
+[project.optional-dependencies]
+performance = ["dask[array]>=2024.1", "netCDF4>=1.6"]
+coast = ["cartopy>=0.23", "shapely>=2.0", "pyshp>=2.3"]
+copernicus = ["copernicusmarine>=2.0"]
+test = ["pytest>=8.0"]
+all = ["dask[array]>=2024.1", "netCDF4>=1.6", "cartopy>=0.23", "shapely>=2.0", "pyshp>=2.3", "copernicusmarine>=2.0", "pytest>=8.0"]
+
+[project.scripts]
+glorys-process = "glorys_processor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

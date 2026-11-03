@@ -1,0 +1,15 @@
+# Instalación base (análisis, mapas matplotlib, Excel y NetCDF)
+numpy>=1.26
+pandas>=2.1
+xarray>=2024.1
+scipy>=1.11
+matplotlib>=3.8
+openpyxl>=3.1
+# Recomendadas con datos GLORYS grandes:
+dask[array]>=2024.1
+netCDF4>=1.6
+# Opcionales (instalar solo si se necesitan):
+# copernicusmarine>=2.0
+# cartopy>=0.23
+# shapely>=2.0
+# pyshp>=2.3
